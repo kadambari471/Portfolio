@@ -1,46 +1,32 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const cardContainers = document.querySelectorAll(".card-container");
+document.addEventListener('DOMContentLoaded', () => {
+    const educationList = document.getElementById('education-list');
+    const addEducationButton = document.getElementById('add-education');
 
-    const revealCards = () => {
-        const triggerHeight = window.innerHeight / 1.3;
-
-        cardContainers.forEach((container) => {
-            const containerTop = container.getBoundingClientRect().top;
-            if (containerTop < triggerHeight) {
-                container.classList.add("visible");
+    if (addEducationButton) {
+        addEducationButton.addEventListener('click', () => {
+            const newEducationItem = document.createElement('li');
+            const userInput = prompt('Enter new education detail:');
+            
+            if (userInput && userInput.trim() !== '') {
+                newEducationItem.textContent = userInput;
+                educationList.appendChild(newEducationItem);
             }
         });
-    };
+    }
 
-    // Debounce function for better performance
-    const debounce = (func, delay) => {
-        let timeout;
-        return () => {
-            clearTimeout(timeout);
-            timeout = setTimeout(func, delay);
-        };
-    };
-
-    // Initial check
-    revealCards();
-
-    // Check on scroll with debounce
-    window.addEventListener("scroll", debounce(revealCards, 100));
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 50,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
-
-function downloadCV() {
-    const resumeUrl = 'Kadambari_Resume.pdf';
-
-    // Check if the resume file exists
-    fetch(resumeUrl, { method: 'HEAD' })
-        .then((response) => {
-            if (response.ok) {
-                window.location.href = resumeUrl;
-            } else {
-                alert("Sorry, the resume is currently unavailable.");
-            }
-        })
-        .catch(() => {
-            alert("An error occurred while trying to download the CV.");
-        });
-}
