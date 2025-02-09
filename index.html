@@ -3,122 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kadambari D Gangawane Portfolio</title>
-    <link rel="stylesheet" href="css/master.css">
-    <script src="js/main.js" defer></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="master.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <nav>
-            <div class="nav-container">
-                <h1 class="logo">Kadambari D Gangawane</h1>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li> 
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#awards">Achievements</a></li>
-                    <li><a href="#activities">Activities</a></li>
-                </ul>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Kadambari D Gangawane</h1>
+                <p>Aarey milk colony, Goregaon East</p>
+                <p>Email: <a href="mailto:kadambarigangawane@gmail.com">kadambarigangawane@gmail.com</a></p>
             </div>
-        </nav>
-    </header>
-
-    <section id="about">
-        <div class="about-container">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    A dedicated learner seeking opportunities to enhance my knowledge and contribute to a well-known organization with passion and responsibility.
-                </p>
-                <p><strong>Location:</strong> Mumbai, Goregaon East</p>
-                <p><strong>Email:</strong> <a href="mailto:kadambarigangawane@gmail.com">kadambarigangawane@gmail.com</a></p>
-                <p><strong>Phone:</strong> 8433545229</p>
-                <button class="btn download-btn" onclick="downloadCV()">Download CV</button>
-            </div>
-            <div class="about-image">
+            <div class="header-image">
                 <img src="images/kadu.png" alt="Kadambari D Gangawane">
             </div>
         </div>
-    </section>    
- 
-    <section id="skills">
-        <h2><center>Skills</center></h2>
-        <div class="card-container">
-            <div class="card">
-                <p>Java, Python</p>
-            </div>
-            <div class="card">
-                <p>Linux, MySQL</p>
-            </div>
-            <div class="card">
-                <p>Robotic Process Automation</p>
-            </div>
-            <div class="card">
-                <p>Power BI</p>
-            </div>
-        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#activities">Activities</a></li>
+        </ul>
+    </nav>
+    <section id="objective" class="objective">
+        <h2>Objective</h2>
+        <p>Seeking an opportunity to meet higher levels with passion and to be proficient towards my responsibility by enhancing my knowledge with a well-known organization.</p>
     </section>
-
-    <section id="projects">
-        <h2><center>Projects</center></h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>Expense Tracker</h3>
-                <p>
-                    A web application that helps users track their expenses, visualize data using charts, and analyze spending habits.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Pet Care Site</h3>
-                <p>
-                    A website offering veterinary contacts, pet care tips, and information on pet medicines and diet plans.
-                </p>
-            </div>
-        </div>
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <ul id="education-list">
+            <li>M.Sc IT, Chikitsak Samuha's S.S & L.S Patkar College, 8</li>
+            <li>B.Sc.IT, Chikitsak Samuha's S.S & L.S Patkar College Of Arts & Science, 7.4</li>
+            <li>HSC, Chikitsak Samuha's S.S & L.S Patkar College Of Arts & Science, 56%</li>
+            <li>SSC, St. Xavier's High School, 65%</li>
+        </ul>
     </section>
-    
-    <section id="awards">
-        <h2><center>Achievements & Awards</center></h2>
-        <div class="card-container">
-            <div class="card">
-                <p>Advanced Program on Java Full Stack Development using Angular</p>
-            </div>
-            <div class="card">
-                <p>SQL using MySQL and Database Design</p>
-            </div>
-            <div class="card">
-                <p>Python Training, IIT Bombay</p>
-            </div>
-            <div class="card">
-                <p>Perl Training, IIT Bombay</p>
-            </div>
-            <div class="card">
-                <p>Machine Learning Certification</p>
-            </div>
-        </div>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java, Python</li>
+            <li>Linux, MySQL</li>
+            <li>Robotic Process Automation</li>
+            <li>Power BI</li>
+        </ul>
     </section>
-    
-    <section id="activities">
-        <h2><center>Activities</center></h2>
-        <div class="card-container">
-            <div class="card">
-                <p>
-                    Participated in social activities like beach cleaning, debates, poster competitions, and teaching underprivileged students as part of the Institutional Social Responsibility (ISR) initiative.
-                </p>
-            </div>
-            <div class="card">
-                <p>
-                    Attended training sessions on ‘Virtual Labs’, IIT – Bombay.
-                </p>
-            </div>
-        </div>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Expense Tracker:</strong> A website to sign up and login to keep track of expenses with features like pie charts and bar charts.</li>
+            <li><strong>Pet Care Site:</strong> A site providing veterinary contacts and basic information about pet care, using HTML, CSS, JavaScript, Bootstrap, and PHP.</li>
+        </ul>
     </section>
-    
-
-    <!-- Footer -->
+    <section id="achievements" class="achievements">
+        <h2>Achievements & Awards</h2>
+        <ul>
+            <li>Advanced Program on Java Full Stack Development using Angular Java</li>
+            <li>SQL using MySQL and Database Design</li>
+            <li>Python Training, Spoken Tutorial, IIT Bombay</li>
+            <li>Perl Training, Spoken Tutorial, IIT Bombay</li>
+            <li>Machine Learning, Mindluster</li>
+        </ul>
+    </section>
+    <section id="activities" class="activities">
+        <h2>Activities</h2>
+        <ul>
+            <li>Institutional Social Responsibility (ISR) - Participated in beach cleaning, debates, poster competitions, and teaching underprivileged students.</li>
+            <li>Training session on 'Virtual Labs', IIT – Bombay</li>
+        </ul>
+    </section>
     <footer>
-        <p>© 2025 Kadambari D Gangawane. All Rights Reserved.</p>
+        <p>&copy; 2025 Kadambari D Gangawane. All rights reserved.</p>
     </footer>
 </body>
 </html>
